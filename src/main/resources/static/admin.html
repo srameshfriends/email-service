@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Ramesh S">
+  <meta name="generator" content="Email Bridge">
+  <title>Samooha Email Console (Admin)</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/form-validation.css" rel="stylesheet">
+  <link href="css/navbar-top-fixed.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background:#F5F5F5">
+  <div class="container-fluid">
+    <h3 class="navbar-brand text-success">Samooha Singapore Pte Ltd</h3>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link mr-3 text-primary" href="index.html" aria-current="page">Activity Log</a>
+        </li>
+        <li class="nav-item">
+          <label class="nav-link mr-3 active" aria-current="page">Admin Console</label>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main>
+  <div class="container">
+    <div class="input-group mb-3">
+      <button class="btn btn-primary" type="button" id="settingsReload">Setting Reload</button>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="container p-2 m-auto overflow-scroll bg-light" id="response-content"
+         style="white-space: pre-wrap; line-height: 1.4rem;">
+    </div>
+  </div>
+</main>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/view.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const adminConsole = new AdminConsole();
+    adminConsole.init();
+  });
+</script>
+</body>
+</html>
